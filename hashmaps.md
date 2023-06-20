@@ -68,11 +68,11 @@ We SHOULD specify the _types_ of the keys and values we are PUTting into the Has
 
 ## Keys
 
-You can use any class as a key, as long as it implements the `.equals()` and `.hashCode()` methods. In the example, `String` and `Integer` meet these requirements.
+You can use any class as a key.
 
 ## Values
 
-When you store a value in a HashMap, it will always store an object, rather than a primitive type. Take a look at the following code.
+When you store a value in a HashMap, it will always store an object (aka an instance of a class), rather than a primitive type. Take a look at the following code.
 
 ```java
 
@@ -94,11 +94,11 @@ public class HashMapDemo {
 
 - Because we use a full integer object, we can call `toString()` on it. (We couldn't if it was a primitive type!)
 
-- In other languages we are used to seeing the key relate to more than one value. 
+- What if we wanted to store more information about our trainer than their years of experience? Maybe we want to be able to include any qualifications they have earned or their favourite dog breed.
+ 
+- We could do this by putting a class as a value. 
 
-- In Java how we do this is by putting a class as a value. 
-
-- To store favouriteDogBreed and yearsExperience make a person class with instance variables for both, and then pass in a person Object as the value.
+- Make a Trainer class with instance variables for yearsExperience, qualifications and favDogBreed. Then pass in a Trainer Object as the value.
 
 ## Methods
 
